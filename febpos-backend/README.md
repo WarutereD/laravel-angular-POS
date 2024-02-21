@@ -22,6 +22,8 @@
 
 POS Laravel backend server endpoints
 # Products
+Product Routes
+
 - {SERVER_URL}/api/products         GET
 - {SERVER_URL}/api/products/{id}    GET
 - {SERVER_URL}/api/products/add     POST
@@ -29,10 +31,12 @@ POS Laravel backend server endpoints
 - {SERVER_URL}/api/products/{id}    DELETE
 
 # Categories
+Category Routes
 - {SERVER_URL}/api/categories       GET
 - {SERVER_URL}/api/categories/add   POST
 
 # Sales
+Sales Routes
 - {SERVER_URL}/api/sales            POST
 
 
