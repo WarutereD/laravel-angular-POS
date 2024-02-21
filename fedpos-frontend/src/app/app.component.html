@@ -89,6 +89,16 @@
     max-width: 700px;
     margin-bottom: 3rem;
   }
+  .divButton{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding-top: 3rem;
+    gap: 1.25rem;
+    max-width: 700px;
+    margin-bottom: 3rem;
+  }
   .header {
     display: flex;
     flex-direction: column;
@@ -138,12 +148,13 @@
   <div class="content">
      <div class="header">
        <h1>Welcome to POS System</h1>
-       <p>This is a placeholder for the POS System.</p>
      </div>
      <div class="divider"></div>
-    <button (click)="toggleForm()">Add Product</button>
+     <div class="divButton">
+      <button (click)="toggleForm()">Add Product</button>
+      <button (click)="recordSale()">Record Sale</button>
+     </div>
     <app-sales class="sales" *ngIf="showSalesForm"></app-sales>
-    <button (click)="recordSale()">Record Sale</button>
     <app-add-data-form *ngIf="showForm" class="form"></app-add-data-form>
     <app-products class="products"></app-products>
   </div>
