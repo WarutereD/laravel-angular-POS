@@ -39,8 +39,6 @@ export class AddDataFormComponent {
     });
   }
 
-  
-
   saveData() {
     if (!this.product_name || !this.category_name || !this.selling_price || !this.unit || !this.description) {
       alert('All fields are required.');
@@ -64,6 +62,7 @@ export class AddDataFormComponent {
         this.selling_price = '';
         this.unit = '';
         this.description = '';
+        window.location.reload();
       },
       error: (err: any) => {
         this.errors = err.error.errors
@@ -73,7 +72,4 @@ export class AddDataFormComponent {
     })
   }
 
-  
-  
-  
 }
