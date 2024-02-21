@@ -1,0 +1,49 @@
+<style>
+    .table {
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: collapse;
+    }
+    .table th, .table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+    .table th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #4CAF50;
+        color: white;
+    }
+    .loading {
+        font-size: 20px;
+        color: #888;
+        margin-top: 20px;
+    }
+</style>
+
+<div>
+    <h1>Products</h1>
+    <p>Here are the products in your inventory</p>
+    <div *ngIf="!products" class="loading">Loading...</div>
+    <table *ngIf="products" class="table table-striped">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Unit</th>
+                <th>Selling Price</th>
+                <th>Category</th> 
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of products">
+                <td>{{ product.product_name }}</td>
+                <td>{{ product.unit }}</td>
+                <td>{{ product.selling_price }}</td>
+                <td>{{ product.category_name }}</td>
+                <td>{{ product.description }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

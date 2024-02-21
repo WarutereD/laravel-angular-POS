@@ -1,0 +1,62 @@
+
+<style>
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 700px;
+  margin-bottom: 3rem;
+}
+
+.form label {
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.form input, .form select, .form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  box-sizing: border-box;
+}
+
+.form textarea {
+  height: 100px;
+}
+</style>
+
+
+<div class="form">
+    <form (ngSubmit)="saveData()">
+      <label for="productName">Name of product:</label><br>
+      <input type="text" id="productName" name="product_name" [(ngModel)]="product_name"><br>
+      <label for="category">Category:</label><br>
+      <select id="category" name="category_name" [(ngModel)]="category_name">
+        <option *ngFor="let categoryName of categories" [value]="categoryName">
+          {{ categoryName }}
+        </option>
+        <!-- Add more categories as needed -->
+      </select><br>
+      <label for="sellingPrice">Selling price:</label><br>
+      <select id="sellingPrice" name="selling_price" [(ngModel)]="selling_price">
+        <option value="700.00">700.00</option>
+        <option value="50.00">50.00</option>
+        <option value="500.00">500.00</option>
+        <!-- Add more prices as needed -->
+      </select><br>
+      <label for="unit">Unit:</label><br>
+      <select id="unit" name="unit" [(ngModel)]="unit">
+        <option value="Kgs">Kgs</option>
+        <option value="Pack">Pack</option>
+        <option value="Piece">Piece</option>
+        <!-- Add more units as needed -->
+      </select><br>
+      <label for="description">Description:</label><br>
+      <textarea id="description" name="description" [(ngModel)]="description"></textarea><br>
+
+      <div class="mb-3">
+        <button class="btn btn-primary" type="submit">Submit</button>
+      </div>
+    </form>
+</div>
+

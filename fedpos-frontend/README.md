@@ -5,9 +5,9 @@
 # To Start
 1. Clone the core from the repository!
 - Run
---bash
+
 `npm install`
 
 - Then 
---bash
+
 `npm run start`
