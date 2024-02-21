@@ -18,6 +18,7 @@ return new class extends Migration
             $table->dateTime('sale_date');
             $table->decimal('total_amount', 10, 2);
             $table->decimal('unit_price', 10, 2);
+            $table->bigInteger('quantity');
             $table->unsignedBigInteger('product_id')->nullable(); // Add foreign key
             $table->timestamps();
 

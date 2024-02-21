@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
             $table->string('product_name');
             $table->unsignedBigInteger('category_id');
-            $table->bigInteger('quantity');
             $table->decimal('selling_price', 10, 2);
             $table->string('unit');
             $table->text('description')->nullable();
