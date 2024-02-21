@@ -40,7 +40,7 @@ export class SalesComponent {
         selected: false, 
         quantity: 0 
       }));
-      console.log('products', this.products);
+      //console.log('products', this.products);
     });
   }
 
@@ -57,7 +57,7 @@ export class SalesComponent {
         quantity: product.quantity,
       }));
 
-      console.log('sales', this.sales);
+      //console.log('sales', this.sales);
 
       this.salesService.saveData(this.sales).pipe(
         catchError(error => {

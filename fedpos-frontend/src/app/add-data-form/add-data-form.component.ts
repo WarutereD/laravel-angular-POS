@@ -35,7 +35,7 @@ export class AddDataFormComponent {
   ngOnInit() {
     this.categoriesService.getCategories().subscribe((data: any) => {
       this.categories = data.map((category: any) => category.category_name);
-      console.log('categories', this.categories);
+      //console.log('categories', this.categories);
     });
   }
 
